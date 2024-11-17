@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+      body {
+        color: light-dark(#2b2d42, #efefec);
+        background-color: light-dark(#efedea, #2b2d42);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <ul id="tareas"></ul>
+    <script>
+      const products = [
+        { title: 'Burger', price: 121 },
+        { title: 'Pizza', price: 20 },
+      ];
+      const app = document.getElementById('app');
+
+      products.forEach((product) => {
+        const li = document.createElement('li');
+        li.textContent = `${product.title} - ${product.price}`;
+        app.appendChild(li);
+      });
+    </script>
+    <script src="../server/01-for-each.js"></script>
+  </body>
+</html>
+
+<!-- CREAR UN ARRAY DE TAREAS CON EL ESTADO, SI ESTA COMPLETADA O NO Y RENDERIZARLO EN HTML.
+ INPUT TIPO CHECKBOX PARA VER SI LA TAREA ESTA COMPLETADA O NO -->
